@@ -1,9 +1,17 @@
-#include <iostream>
+// C++ program to find compound interest
+#include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-  int a =1, b=2;
-  int sum = a + b;
-  cout << sum ;
+// Driver code
+int main()
+{
+    double principal = 10000, rate = 5, time = 2;
+
+    // Calculate compound interest
+    double A = principal * ((pow((1 + rate / 100), time)));
+    double CI = A - principal;
+
+    cout << "Compound interest is " << CI;
+
     return 0;
 }
