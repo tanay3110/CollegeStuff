@@ -1,11 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#include <stdlib.h>
+
 int main() {
     int m, n;
     printf("Enter number of rows: ");
     scanf("%d", &m);
     printf("Enter number of columns: ");
     scanf("%d", &n);
-    int a[m][n], b[m][n], sum[m][n], product[m][n];
+    
+    // Allocate dynamic 2D arrays
+    int **a = (int **)malloc(m * sizeof(int *));
+    int **b = (int **)malloc(m * sizeof(int *));
+    int **sum = (int **)malloc(m * sizeof(int *));
+    int **product = (int **)malloc(m * sizeof(int *));
+    
+    for (int i = 0; i < m; i++) {
+        a[i] = (int *)malloc(n * sizeof(int));
+        b[i] = (int *)malloc(n * sizeof(int));
+        sum[i] = (int *)malloc(n * sizeof(int));
+        product[i] = (int *)malloc(n * sizeof(int));
+    }
     // Input matrix A
     printf("\nEnter elements of matrix A:\n");
     for (int i = 0; i < m; i++) {
@@ -42,6 +57,18 @@ int main() {
         }
         printf("\n");
     }
+
+    // Free allocated memory
+    for (int i = 0; i < m; i++) {
+        free(a[i]);
+        free(b[i]);
+        free(sum[i]);
+        free(product[i]);
+    }
+    free(a);
+    free(b);
+    free(sum);
+    free(product);
 
     return 0;
 }
