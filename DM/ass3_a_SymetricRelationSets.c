@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 int isSymmetric(int A[], int n, int B[], int m) {
     
     for (int i = 0; i < n; i++) {
