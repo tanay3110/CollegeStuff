@@ -2,6 +2,13 @@
 *.exe
 *.out
 *.app
+*.bin
+*.elf
+
+# Extensionless outputs from the Compile and Run C++ task
+cpp/cpp
+cpp/pattern1
+cpp/STL
 
 # Object files
 *.o
