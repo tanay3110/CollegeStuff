@@ -1,3 +1,5 @@
+# Data Structures & Algorithms — Complete Reference Notes
+
 ---
 title: "Data Structures & Algorithms — Complete Reference Notes"
 subtitle: "From Fundamentals to Advanced Topics, with Cybersecurity Applications"
